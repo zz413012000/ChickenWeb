@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
+        *{
+            margin: 0;
+            padding: 0;
+            list-style:none;
+        }
+        .banner{
+            border:1px solid #333;
+            width: 100%;
+            height: 280px;
+            background-color: #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .search{
+            width: 180px;
+            height: 30px;
+            border: 1px solid #000;
+            border-radius: 200px;
+            background-color: #fff;
+            display: flex;
+        }
+        .search form{
+            display: flex;
+            width: 100%;
+            align-items: center;
+            /* border: 1px solid #000; */
+        }
+        .search form input{
+            width: 100%;
+            padding-left: 12px;
+            height: 100%;
+            border: 1px solid #000;
+            border: none;
+            background:none;
+        }
+        .search form input:focus{
+            outline:none;
+        }
+        .search form button{
+            height: 100%;
+            border: none;
+            background-color: transparent;
+            width: 30px;
+            flex-grow: 1;
+        }
+        .search form input[type="submit"]{
+            width: 30px;
+            height: 30px;
+            background-color: red;
+            border:1px solid #000;
+            border-radius: 100px;
+        }
+        .item{
+            display: flex;
+            flex-direction: row;
+        }
+        .item-top{
+            transform: translateY();
+        }
+        .item-bottom{
+            transform: translateY(-10px);
+        }
+        .box{
+            flex: auto;
+            width: 100px;
+            height: 100px;
+            /* border:1px solid #333; */
+        }
+        .img{    
+            flex:none;        
+            width: 350px;
+            height: 140px;
+            border:1px solid #333;
+            background-color: yellow;
+        }
+        .img-box{
+            border:1px solid #000;
+        }
+        .top{
+            background-color: #ccc;
+            padding-bottom: 15px;
+        }
+        .bottom{
+            padding-top: 15px;
+            background-color: #888;
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="banner">
+        <div class="search">
+            <form action="">
+                <input type="text">
+                <button>
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+    <div class="container">
+        <div class="item item-top">
+                <div class="box"></div>
+                <div class="img-box top">
+                    <div class="img"></div>
+                </div>
+        </div>
+        <div class="item item-bottom">
+            <div class="img-box bottom">
+                <div class="img"></div>
+            </div>
+            <div class="box"></div>
+        </div>
+    </div>
+</div>
+<script>
+    console.log(document.getElementsByClassName("img"));
+    var target=document.getElementsByClassName("img");
+    console.log(target.length);
+    for(let i=0;i<target.length;i++){
+        target[i].addEventListener("click",function(){
+            alert("OK "+i);
+        });
+    }
+</script>
+</body>
+</html>
