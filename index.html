@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/1626653101.ico" />
     <title>小雞網站</title>
     <style>
          @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
@@ -74,6 +75,10 @@
             display: flex;
             flex-direction: row;
             margin-bottom: 15px;
+            transition: .5s;
+        }
+        .container_item:hover{
+            transform: translateY(-5px);
         }
         .item-top{
             margin-top: 10px;
@@ -158,9 +163,71 @@
             flex:auto;
             width: 100px;
             height: 100px;
-            /* border: 1px solid #000; */
-            /* background-color: #ccc; */
             z-index: -2;
+        }
+        .foot{
+            width: 100%;
+            border: 1px solid #000;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            position: relative;
+        }
+        .rock{
+            height: 320px;
+            /* border:1px solid #000; */
+        }
+        .rock img{
+            height: 100%;
+        }
+        .card{
+            height: 174px;
+            width: 165px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            /* background-color: #ccc; */
+        }
+        .card_background{
+            position: absolute;
+            width:100%;
+            height: 100%;
+        }
+        .card_background img{
+            width: 100%;
+            height: 100%;
+        }
+        .card-img{
+            position: absolute;
+            /* background-color: red; */
+            border-radius:50%;
+            width: 80%;
+            height: 80%;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+        .card-img img{
+            width: 100%;
+            height: 100%;
+        }
+        .card_button{
+            position: absolute;
+            width: 104px;
+            height: 28px;
+            left: 0;
+            right: 0;
+            bottom: -42px;
+            margin: auto;
+        }
+        .card_button img{
+            width: 100%;
+            height: 100%;
         }
     </style>
 </head>
@@ -225,17 +292,23 @@
     </div>
 </div>
 <div class="foot">
-    
+    <div class="rock leftrock">
+        <img src="img/index/leftrock.png" alt="">
+    </div>
+    <div class="card">
+        <div class="card-img">
+            <img src="img/index/card1.png" alt="">
+        </div>
+        <div class="card_background">
+            <img src="img/index/cardbackground.png" alt="">
+        </div>
+        <div class="card_button">
+            <img src="img/index/yellowsausage.png" alt="">
+        </div>
+    </div>
+    <div class="rock rightrock">
+        <img src="img/index/rightrock.png" alt="">
+    </div>
 </div>
-<script>
-    console.log(document.getElementsByTagName("button"));
-    var target=document.getElementsByTagName("button");
-    console.log(target.length);
-    for(let i=0;i<target.length;i++){
-        target[i].addEventListener("click",function(){
-            alert("按到小雞按鍵 "+(i+1));
-        });
-    }
-</script>
 </body>
 </html>
